@@ -2,10 +2,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculator {
-    public static void main(String[] args) {
+    public static double main() {
         var myScanner = new Scanner(System.in);
-
-
         String operationSign;
         do {
             System.out.println("Jaką operację chcesz wykonać [+] [-] [*] [/]: ");
@@ -41,5 +39,6 @@ public class Calculator {
         }
         double result = operation.doOperation(input1, input2, operationSign);
         System.out.println("Wynik: " + result);
+        return result;
     }
 }
